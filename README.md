@@ -1,5 +1,7 @@
 # Coreference-based Graph Search (CGS)
 
+[![PyPI version](https://img.shields.io/pypi/v/pycgs.svg)](https://pypi.org/project/pycgs/)
+
 This is the Python implementation of the CGS algorithm.
 
 ## Documentation
