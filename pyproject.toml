@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pycgs"
+version = "1.0.0"
+description = "Python implementation of the Coreference-based Graph Search (CGS) algorithm."
+authors = ["YANG Zijie <yangzijie@westlake.edu.cn>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+networkx = "^3.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# If you want to publish the package, please:
+# 1. run `pytest` to make sure all tests pass
+# 2. run `poetry build` to build the package
+# 3. run `poetry publish` to publish the package
