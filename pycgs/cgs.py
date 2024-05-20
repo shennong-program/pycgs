@@ -2,7 +2,6 @@
 This module contains the algorithms for Coreference-based Graph Search (CGS).
 """
 
-
 import networkx as nx
 
 from pycgs.type import Edge, EdgeWithWeight
@@ -19,8 +18,11 @@ def foundational_cgs(relationships: list[Edge]) -> dict[str, str]:
     cptg = nx.DiGraph()  # CPTG: Coreference-based Primary Term Graph
 
     # Add edges to the graph based on the coreference relationships
-    for src, tgt in relationships:
-        cptg.add_edge(src, tgt)
+    cptg.add_edges_from(set(relationships))  # Use set to remove duplicates
+
+    # Check if the graph is a Directed Acyclic Graph
+    if not nx.is_directed_acyclic_graph(cptg):
+        raise ValueError("The graph is  not a Directed Acyclic Graph.")
 
     # Initialize the dictionary to store the ultimate Primary Terms
     primary_term_dict = {}
@@ -36,7 +38,9 @@ def foundational_cgs(relationships: list[Edge]) -> dict[str, str]:
             current = node
             while cptg.out_degree(current) != 0:
                 # Follow the directed edges to find the Primary Term
-                current = next(cptg.successors(current))
+                current = sorted(cptg.successors(current))[
+                    0
+                ]  # Sort to get a deterministic result
             primary_term_dict[node] = current
 
     return primary_term_dict
