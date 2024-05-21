@@ -30,6 +30,18 @@ def test_foundational_cgs():
             "relationships": [("A", "B"), ("B", "C"), ("C", "D"), ("D", "E")],
             "primary_term_dict": {"A": "E", "B": "E", "C": "E", "D": "E", "E": "E"},
         },
+        # Test input is a set
+        {
+            "relationships": {("A", "B"), ("B", "C"), ("D", "B"), ("E", "F")},
+            "primary_term_dict": {
+                "A": "C",
+                "B": "C",
+                "C": "C",
+                "D": "C",
+                "E": "F",
+                "F": "F",
+            },
+        },
         # Test duplicate relationships
         {
             "relationships": [("A", "B"), ("B", "C"), ("A", "B"), ("B", "C")],

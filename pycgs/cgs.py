@@ -10,7 +10,7 @@ from pycgs.type import Edge, EdgeWithWeight
 __all__ = ["foundational_cgs", "weighted_cgs"]
 
 
-def foundational_cgs(relationships: list[Edge]) -> dict[str, str]:
+def foundational_cgs(relationships: list[Edge] | set[Edge]) -> dict[str, str]:
     """
     Foundational CGS algorithm.
     """
