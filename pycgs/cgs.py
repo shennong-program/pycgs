@@ -4,7 +4,7 @@ This module contains the algorithms for Coreference-based Graph Search (CGS).
 
 import networkx as nx
 
-from pycgs.type import Edge, EdgeWithWeight
+from pycgs.types import Edge, EdgeWithWeight
 
 
 __all__ = ["foundational_cgs", "weighted_cgs"]

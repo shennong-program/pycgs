@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pycgs"
-version = "1.0.2"
+version = "1.0.3"
 description = "Python implementation of the Coreference-based Graph Search (CGS) algorithm."
 authors = ["YANG Zijie <yangzijie@westlake.edu.cn>"]
 license = "Apache-2.0"
