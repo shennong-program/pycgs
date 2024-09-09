@@ -42,15 +42,47 @@ print(primary_terms)
 # {'A': 'C', 'B': 'C', 'C': 'C', 'D': 'C', 'E': 'E'}
 ```
 
+## PrimaryTermExtractor
+
+`PrimaryTermExtractor` is a class that allows the extraction of primary terms from a given text based on a dictionary of coreference relationships between terms and their primary terms.
+
+```py
+from pycgs.cgs import PrimaryTermExtractor
+
+# Create a dictionary mapping terms to their primary terms
+primary_term_dict = {
+    "Artemisia annua Part-aerial": "nmm-0001",
+    "Qing-hao": "nmm-0001",
+    "黄花蒿地上部": "nmm-0001",
+    "青蒿": "nmm-0001",
+    "Ephedra sinica Stem-herbaceous": "nmm-0003",
+    "Cao-ma-huang": "nmm-0003",
+    "草麻黄草质茎": "nmm-0003",
+    "草麻黄": "nmm-0003",
+}
+
+# Initialize the PrimaryTermExtractor
+extractor = PrimaryTermExtractor(primary_term_dict)
+
+# Extract primary terms from a mixed language text
+text = "Both Artemisia annua Part-aerial and 草麻黄草质茎 are Natural Medicinal Materials and are used in traditional Chinese medicine."
+result = extractor.extract_primary_terms(text)
+
+print(result)
+# Output:
+# {'Artemisia annua Part-aerial': 'nmm-0001', '草麻黄草质茎': 'nmm-0003'}
+```
+
 ## Cite this work
 
 ```bibtex
-@misc{yang2024shennongalpha,
+@misc{yang2024shennongalphaaidrivensharingcollaboration,
       title={ShennongAlpha: an AI-driven sharing and collaboration platform for intelligent curation, acquisition, and translation of natural medicinal material knowledge}, 
       author={Zijie Yang and Yongjing Yin and Chaojun Kong and Tiange Chi and Wufan Tao and Yue Zhang and Tian Xu},
       year={2024},
       eprint={2401.00020},
       archivePrefix={arXiv},
-      primaryClass={cs.AI}
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2401.00020}, 
 }
 ```

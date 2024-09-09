@@ -4,7 +4,7 @@ Test: pycgs.cgs
 
 import pytest
 
-from pycgs.cgs import (
+from pycgs.cgs.algorithms import (
     foundational_cgs,
     weighted_cgs,
 )
