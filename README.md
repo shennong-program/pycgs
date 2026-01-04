@@ -6,15 +6,30 @@ This is the Python implementation of the CGS algorithm.
 
 ## Documentation
 
-The documentation for `pycgs` is available on the documentation website of the ShennongAlpha ([ShennongDoc](https://shennongalpha.westlake.edu.cn/doc/)):
+The documentation for `pycgs` is hosted via GitHub Pages from this repository:
 
-- [English](https://shennongalpha.westlake.edu.cn/doc/en/pycgs/)
-- [中文](https://shennongalpha.westlake.edu.cn/doc/zh/pycgs/)
+- [English](https://shennong-program.github.io/pycgs/#/en/)
+- [中文](https://shennong-program.github.io/pycgs/#/zh/)
 
-You can also contribute to the documentation on the [`ShennongDoc`](https://github.com/Shennong-Program/ShennongDoc) GitHub repository by submitting a pull request:
+The documentation source lives in `docs/` of this repository; pull requests are welcome.
 
-- [English](https://github.com/Shennong-Program/ShennongDoc/tree/main/doc/en/pycgs/)
-- [中文](https://github.com/Shennong-Program/ShennongDoc/tree/main/doc/zh/pycgs/)
+### Local docs site
+
+To preview the Docsify site from this repo:
+
+```bash
+npx docsify serve docs
+```
+
+Then open `http://localhost:3000` in your browser.
+
+If you prefer not to use Docsify CLI, any static server works too:
+
+```bash
+python -m http.server -d docs 8000
+```
+
+Then open `http://localhost:8000`.
 
 ## Foundational CGS
 
@@ -75,4 +90,4 @@ print(result)
 
 ## Cite this work
 
-Yang, Z., Yin, Y., Kong, C. et al. ShennongAlpha: an AI-driven sharing and collaboration platform for intelligent curation, acquisition, and translation of natural medicinal material knowledge. Cell Discov 11, 32 (2025). https://doi.org/10.1038/s41421-025-00776-2
+Yang, Z., Yin, Y., Kong, C. et al. ShennongAlpha: an AI-driven sharing and collaboration platform for intelligent curation, acquisition, and translation of natural medicinal material knowledge. Cell Discov 11, 32 (2025). <https://doi.org/10.1038/s41421-025-00776-2>
