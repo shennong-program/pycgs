@@ -1,5 +1,21 @@
 # Coreference-based Graph Search (CGS)
 
+## Installation
+
+`pycgs` requires Python 3.11 or newer.
+
+Install from PyPI with `pip`:
+
+```bash
+pip install pycgs
+```
+
+If you use `uv` to manage project dependencies:
+
+```bash
+uv add pycgs
+```
+
 ## Foundational CGS
 
 To elucidate the process of CGS, we illustrate it with a straightforward case.

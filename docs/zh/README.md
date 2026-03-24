@@ -1,5 +1,21 @@
 # 共指图搜索（Coreference Graph Search, CGS）
 
+## 安装
+
+`pycgs` 需要 Python 3.11 或更高版本。
+
+使用 `pip` 从 PyPI 安装：
+
+```bash
+pip install pycgs
+```
+
+如果你使用 `uv` 管理项目依赖：
+
+```bash
+uv add pycgs
+```
+
 ## 基础 CGS（Foundational CGS）
 
 为阐明 CGS 的流程，我们用一个简单案例进行说明。

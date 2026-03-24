@@ -4,6 +4,22 @@
 
 This is the Python implementation of the CGS algorithm.
 
+## Installation
+
+`pycgs` requires Python 3.11 or newer.
+
+Install from PyPI with `pip`:
+
+```bash
+pip install pycgs
+```
+
+If you use `uv` to manage project dependencies:
+
+```bash
+uv add pycgs
+```
+
 ## Documentation
 
 The documentation for `pycgs` is hosted via GitHub Pages from this repository:
